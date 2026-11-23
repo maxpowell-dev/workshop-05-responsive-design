@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 5: Responsive Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Task 4: Responsive navigation bar -->
+    <nav class="responsive-nav">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-list">☰ Menu</button>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Workshop 5: Responsive Design</h1>
+
+        <!-- Task 1: Responsive layout -->
+        <h2>Responsive Layout</h2>
+        <div class="responsive-container">
+            <div class="column">Column 1</div>
+            <div class="column">Column 2</div>
+        </div>
+
+        <!-- Task 2: Responsive image -->
+        <h2>Responsive Image</h2>
+        <img src="cyber-security.png" alt="Cyber security experts working with tech devices under neon lights" class="responsive-image">
+
+        <!-- Task 3: Media queries -->
+        <h2>Media Queries</h2>
+        <div class="media-query-box">Resize the window to see the effect</div>
+    </main>
+
+    <script>
+        // Task 4: show and hide the menu on small screens
+        var toggle = document.querySelector(".menu-toggle");
+        var navList = document.querySelector(".nav-list");
+
+        toggle.addEventListener("click", function () {
+            var isOpen = navList.classList.toggle("open");
+            toggle.setAttribute("aria-expanded", isOpen);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Task 4: responsive navigation bar */
+.responsive-nav {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.responsive-nav .nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.responsive-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.responsive-nav a:hover {
+  text-decoration: underline;
+}
+
+.responsive-nav .menu-toggle {
+  display: none;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* Task 1: responsive layout (two columns, one on small screens) */
+.responsive-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+/* Task 2: responsive image */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Task 3: media query box */
+.media-query-box {
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+  }
+
+  .media-query-box {
+    background-color: lightcoral;
+  }
+
+  .responsive-nav .nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .responsive-nav .nav-list.open {
+    display: flex;
+  }
+
+  .responsive-nav .menu-toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 601px) {
+  .media-query-box {
+    background-color: lightblue;
+  }
+}
